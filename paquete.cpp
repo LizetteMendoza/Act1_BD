@@ -33,7 +33,6 @@ string Paquete::getDestino(){
     return destino;
 }
 
-
 void Paquete::setPeso(float v){
     peso=v;
 }

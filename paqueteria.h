@@ -23,8 +23,6 @@ public:
     void recuperar();
     void insertar_inicio(T &v);
     void eliminar_inicio();
-    
-    
 
     friend Paqueteria& operator <<(Paqueteria& p, const T&o){
         p.agregarPaquete(o);
@@ -37,26 +35,22 @@ public:
 template<class T>
 Paqueteria<T>::Paqueteria(){}
 
-
-
 template<class T>
 void Paqueteria<T>::agregarPaquete(const T&p){
+   
    paquetes.push_back(p);
 }
-
 
 template<class T>
 void Paqueteria<T>::insertar_inicio(T &v){
     
-    paquetes.insert(paquetes.begin(), v);
-    
+    paquetes.insert(paquetes.begin(), v); 
 }
-
 
 template<class T>
 void Paqueteria<T>::eliminar_inicio(){
+    
     paquetes.erase(paquetes.begin());
-   
 }
 
 template<class T>
@@ -119,9 +113,6 @@ void Paqueteria<T>::recuperar(){
             p.setPeso(peso);
 
             agregarPaquete(p);
-
-
-            
             
         }
     }
